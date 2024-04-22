@@ -1,8 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Anybody, Pathway_Extreme, Saira } from "next/font/google";
 import "./globals.css";
+import { House } from "@/components/House";
+import { Canvas } from "@/components/Canvas";
+import { Suspense } from "react";
+import { cn } from "@/util";
+import Link from "next/link";
+import { AnimationManager } from "@/components/AnimationManager";
+import { Divider } from "@/components/Divider";
 
-const inter = Inter({ subsets: ["latin"] });
+const anybody = Anybody({
+  subsets: ["latin"],
+  axes: ["wdth"],
+  // adjustFontFallback: false,
+  variable: "--font-main",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +28,43 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={cn([
+          "select-none text-white font-sans [font-stretch:150%] overscroll-none",
+          "before:bg-background before:fixed before:inset-0 before:-z-10",
+          anybody.variable,
+        ])}
+      >
+        <AnimationManager />
+        <Canvas>
+          <Suspense>
+            <House />
+          </Suspense>
+        </Canvas>
+        <div className="text-green px-10 py-4 z-20">
+          solving digital problems since 2010
+        </div>
+        <Divider />
+        <Link
+          href="/"
+          className="z-20 relative block text-[166px] font-[850] text-green px-10"
+        >
+          tghp
+        </Link>
+        <Divider />
+        <div
+          className={cn([
+            "flex gap-8 py-8 px-10",
+            "*:z-20 *:bg-green *:text-teal-dark *:min-w-[10em] *:text-center *:pt-6 *:pb-5 *:px-8 *:font-bold *:tracking-wider *:text-lg *:leading-none",
+          ])}
+        >
+          <Link href="/about">about us</Link>
+          <Link href="/work">projects</Link>
+          <Link href="/contact">connect</Link>
+        </div>
+        <Divider />
+        {children}
+      </body>
     </html>
   );
 }
