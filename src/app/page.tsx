@@ -7,13 +7,15 @@ export default function Home() {
   return (
     <>
       <Main.Container className="grow flex flex-col">
-        <Main.OverCanvas className="w-[27.7rem] ml-[--gutter-first] py-12 grow flex items-center border-l border-teal-dark">
-          <div className="font-light">
-            Quis qui proident eu aute anim occaecat minim eiusmod incididunt. In
-            anim et ut eu dolore culpa quis ad cillum laborum. Labore nulla ex
-            aute dolor velit irure proident eiusmod fugiat duis.
+        <div className="ml-[--gutter-first] py-12 grow flex items-center border-l border-teal-dark">
+          <div className="border-t border-b border-teal-dark w-full">
+            <Main.OverCanvas className="w-[40.5rem] font-light">
+              Quis qui proident eu aute anim occaecat minim eiusmod incididunt.
+              In anim et ut eu dolore culpa quis ad cillum laborum. Labore nulla
+              ex aute dolor velit irure proident eiusmod fugiat duis.
+            </Main.OverCanvas>
           </div>
-        </Main.OverCanvas>
+        </div>
         <Divider />
         <Main.OverCanvas className="ml-[--gutter-first] w-[40.6rem] flex flex-col border-l border-teal-dark *:grid *:grid-cols-[repeat(63,1fr)] *:relative *:z-10">
           <div

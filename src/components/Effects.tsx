@@ -52,7 +52,7 @@ export function Effects({ movementSpringConfig }: EffectsProps) {
       />
       <Bloom
         ref={bloomRef}
-        luminanceThreshold={0.2}
+        luminanceThreshold={0.15}
         mipmapBlur
         luminanceSmoothing={0.6}
         intensity={zoomedOutIntensity}
