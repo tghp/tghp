@@ -17,7 +17,6 @@ type EffectsProps = {
 
 export function Effects({ movementSpringConfig }: EffectsProps) {
   const housePlace = useAtomValue(housePlaceAtom);
-
   const bloomRef = useRef<typeof BloomEffect>(null);
 
   const [bloomSprings, bloomApi] = useSpring<{ intensity: number }>(() => ({
@@ -44,11 +43,10 @@ export function Effects({ movementSpringConfig }: EffectsProps) {
 
   return (
     <EffectComposer>
-      <Noise opacity={0.001} blendFunction={BlendFunction.ADD} />
       <DotScreen
-        scale={11}
-        opacity={0.01}
-        blendFunction={BlendFunction.OVERLAY}
+        scale={10}
+        opacity={0.07}
+        blendFunction={BlendFunction.SOFT_LIGHT}
       />
       <Bloom
         ref={bloomRef}
@@ -57,6 +55,7 @@ export function Effects({ movementSpringConfig }: EffectsProps) {
         luminanceSmoothing={0.6}
         intensity={zoomedOutIntensity}
       />
+      <Noise opacity={0.022} blendFunction={BlendFunction.SOFT_LIGHT} />
     </EffectComposer>
   );
 }

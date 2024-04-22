@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Anybody } from "next/font/google";
 import "./globals.css";
-import { House } from "@/components/House";
+import { Scene } from "@/components/Scene";
 import { Canvas } from "@/components/Canvas";
 import { Suspense } from "react";
 import { cn } from "@/util";
@@ -32,7 +32,7 @@ export default function RootLayout({
       <body
         className={cn([
           "h-full flex flex-col select-none text-white font-sans [font-stretch:150%] overscroll-none",
-          "before:bg-background before:fixed before:inset-0 before:-z-10",
+          "before:bg-background before:fixed before:inset-0 before:-z-30",
           "[--gutter-first:20px]",
           anybody.variable,
         ])}
@@ -40,26 +40,41 @@ export default function RootLayout({
         <AnimationManager />
         <Canvas>
           <Suspense>
-            <House />
+            <Scene />
           </Suspense>
         </Canvas>
-        <div className="text-green px-10 py-4 z-20">
+        <div
+          className={cn([
+            "text-green px-4 py-4 z-20 text-xs",
+            "sm:px-10 sm:text-base",
+          ])}
+        >
           solving digital problems since 2010
         </div>
         <Divider />
         <div>
           <Link
             href="/"
-            className="z-20 relative block text-[108px] font-[850] text-green px-10"
+            className={cn([
+              "z-20 relative block text-[calc(27.2vw-var(--gutter-first))] font-[850] text-green px-4",
+              "sm:text-[108px] sm:px-10",
+            ])}
           >
             tghp
           </Link>
         </div>
         <Divider />
-        <div className="flex ml-[--gutter-first] border-l border-teal-dark">
+        <div
+          className={cn([
+            "relative flex ml-[--gutter-first] border-l border-teal-dark",
+            "max-sm:flex-col",
+          ])}
+        >
           <MenuLink href="/about">about us</MenuLink>
           <MenuLink href="/work">projects</MenuLink>
-          <MenuLink href="/contact">connect</MenuLink>
+          <MenuLink href="/contact" last>
+            connect
+          </MenuLink>
         </div>
         <Divider />
         {children}

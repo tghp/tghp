@@ -3,13 +3,35 @@ import * as Main from "@/components/Main";
 import Image from "next/image";
 import { cn } from "@/util";
 
+type TechLogoProps = {
+  image: string;
+  alt: string;
+};
+
+function TechLogo({ image, alt }: TechLogoProps) {
+  return (
+    <div className="[grid-column:span_var(--col-span)] border-r border-b border-teal-dark">
+      <Main.OverCanvas className="flex items-center justify-center h-full">
+        <Image
+          src={`/icons/${image}.svg`}
+          alt={alt}
+          width={50}
+          height={50}
+          unoptimized
+          className="size-[--logo-size] object-contain"
+        />
+      </Main.OverCanvas>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <>
       <Main.Container className="grow flex flex-col">
         <div className="ml-[--gutter-first] py-12 grow flex items-center border-l border-teal-dark">
-          <div className="border-t border-b border-teal-dark w-full">
-            <Main.OverCanvas className="w-[40.5rem] font-light">
+          <div className="border-t border-b border-teal-dark w-full my-10">
+            <Main.OverCanvas className="w-[calc(min(43rem,100%))] font-light pr-8">
               Quis qui proident eu aute anim occaecat minim eiusmod incididunt.
               In anim et ut eu dolore culpa quis ad cillum laborum. Labore nulla
               ex aute dolor velit irure proident eiusmod fugiat duis.
@@ -17,164 +39,47 @@ export default function Home() {
           </div>
         </div>
         <Divider />
-        <Main.OverCanvas className="ml-[--gutter-first] w-[40.6rem] flex flex-col border-l border-teal-dark *:grid *:grid-cols-[repeat(63,1fr)] *:relative *:z-10">
-          <div
-            className={cn([
-              "[&_img]:size-[70%] [&_img]:object-contain *:flex *:items-center *:justify-center *:col-span-9 *:border-r *:border-b *:border-teal-dark",
-            ])}
-          >
-            <div>
-              <Image
-                src="/icons/nextjs.svg"
-                alt="Next.js"
-                width={50}
-                height={50}
-                unoptimized
-              />
-            </div>
-            <div>
-              <Image
-                src="/icons/wordpress.svg"
-                alt="WordPress"
-                width={50}
-                height={50}
-                unoptimized
-              />
-            </div>
-            <div>
-              <Image
-                src="/icons/payload.svg"
-                alt="Payload"
-                width={50}
-                height={50}
-                unoptimized
-              />
-            </div>
-            <div>
-              <Image
-                src="/icons/magento.svg"
-                alt="Magento"
-                width={50}
-                height={50}
-                unoptimized
-              />
-            </div>
-            <div>
-              <Image
-                src="/icons/shopify.svg"
-                alt="Shopify"
-                width={50}
-                height={50}
-                unoptimized
-              />
-            </div>
-            <div>
-              <Image
-                src="/icons/react.svg"
-                alt="React"
-                width={50}
-                height={50}
-                unoptimized
-              />
-            </div>
-            <div>
-              <Image
-                src="/icons/astro.svg"
-                alt="Astro"
-                width={50}
-                height={50}
-                unoptimized
-              />
-            </div>
+        <div
+          className={cn([
+            "ml-[--gutter-first]  border-l border-teal-dark *:grid *:grid-cols-[repeat(40,1fr)]",
+            "w-[calc(min(40.6rem,100%-(var(--gutter-first)*2)))]",
+          ])}
+        >
+          <div className="[--logo-size:70%] [--col-span:10] sm:[--col-span:5]">
+            {(
+              [
+                { image: "nextjs", alt: "Next.js" },
+                { image: "payload", alt: "Payload" },
+                { image: "wordpress", alt: "WordPress" },
+                { image: "magento", alt: "Magento" },
+                { image: "shopify", alt: "Shopify" },
+                { image: "react", alt: "React" },
+                { image: "astro", alt: "Astro" },
+                { image: "tailwind", alt: "Tailwind" },
+              ] satisfies Array<TechLogoProps>
+            ).map((logo) => (
+              <TechLogo {...logo} key={logo.image} />
+            ))}
           </div>
-          <div
-            className={cn([
-              "[&_img]:size-[60%] [&_img]:object-contain *:col-span-7 *:flex *:items-center *:justify-center *:border-r *:border-teal-dark",
-            ])}
-          >
-            <div>
-              <Image
-                src="/icons/git.svg"
-                alt="Git"
-                width={50}
-                height={50}
-                unoptimized
-              />
-            </div>
-            <div>
-              <Image
-                src="/icons/node.svg"
-                alt="Node.js"
-                width={50}
-                height={50}
-                unoptimized
-              />
-            </div>
-            <div>
-              <Image
-                src="/icons/php.svg"
-                alt="PHP"
-                width={50}
-                height={50}
-                unoptimized
-              />
-            </div>
-            <div>
-              <Image
-                src="/icons/vue.svg"
-                alt="Vue"
-                width={50}
-                height={50}
-                unoptimized
-              />
-            </div>
-            <div>
-              <Image
-                src="/icons/vite.svg"
-                alt="Vite"
-                width={50}
-                height={50}
-                unoptimized
-              />
-            </div>
-            <div>
-              <Image
-                src="/icons/figma.svg"
-                alt="Figma"
-                width={50}
-                height={50}
-                unoptimized
-              />
-            </div>
-            <div>
-              <Image
-                src="/icons/gatsby.svg"
-                alt="Gatsby"
-                width={50}
-                height={50}
-                unoptimized
-              />
-            </div>
-            <div>
-              <Image
-                src="/icons/three.svg"
-                alt="Three.js"
-                width={50}
-                height={50}
-                unoptimized
-              />
-            </div>
-            <div>
-              <Image
-                src="/icons/remix.svg"
-                alt="Remix"
-                width={50}
-                height={50}
-                unoptimized
-              />
-            </div>
+          <div className="[--logo-size:60%] [--col-span:8] sm:[--col-span:4]">
+            {(
+              [
+                { image: "git", alt: "Git" },
+                { image: "node", alt: "Node.js" },
+                { image: "php", alt: "PHP" },
+                { image: "sass", alt: "Sass" },
+                { image: "vite", alt: "Vite" },
+                { image: "figma", alt: "Figma" },
+                { image: "vue", alt: "Vue" },
+                { image: "three", alt: "Three.js" },
+                { image: "gatsby", alt: "Gatsby" },
+                { image: "remix", alt: "Remix" },
+              ] satisfies Array<TechLogoProps>
+            ).map((logo) => (
+              <TechLogo {...logo} key={logo.image} />
+            ))}
           </div>
-        </Main.OverCanvas>
+        </div>
         <Divider />
       </Main.Container>
     </>

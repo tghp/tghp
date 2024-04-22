@@ -1,70 +1,44 @@
 "use client";
 
-import { LayoutCamera, motion } from "framer-motion-3d";
 import {
   Environment,
   Lightformer,
   PerspectiveCamera,
-  SoftShadows,
   useGLTF,
 } from "@react-three/drei";
 import { useAtomValue } from "jotai";
 import { housePlaceAtom } from "@/util/jotai";
-import { MotionConfig, useAnimate } from "framer-motion";
 import { Effects } from "@/components/Effects";
 // @ts-ignore
 import { degToRad } from "three/src/math/MathUtils";
-import { useEffect, useMemo, useRef } from "react";
-import { useSpring, animated, SpringProps } from "@react-spring/three";
+import { useEffect, useRef } from "react";
+import { animated, SpringProps, useSpring } from "@react-spring/three";
 import { Euler, useFrame, useThree, Vector3 } from "@react-three/fiber";
-import { PerspectiveCamera as PerspectiveCameraImpl, Points } from "three";
-import { useInterval } from "react-use";
-import { random } from "mathjs";
-import * as THREE from "three";
+import { Backdrop } from "@/components/Backdrop";
+import { useWindowSize } from "react-use";
+import { Group } from "three";
 
 type HouseProps = {};
 
-export function House({}: HouseProps) {
+export function Scene({}: HouseProps) {
   /**
    * Setup
    */
   const housePlace = useAtomValue(housePlaceAtom);
   const { camera } = useThree();
   const { nodes } = useGLTF("/tghp-3-transformed.glb");
+  const houseRef = useRef<Group>(null);
 
-  /**
-   * Particles
-   */
-  const points = useRef<Points>(null);
-
-  const particlesPosition = useMemo(() => {
-    const count = 8000;
-
-    const positions = new Float32Array(count * 3);
-    const distance = 9;
-
-    for (let i = 0; i < count; i++) {
-      const theta = THREE.MathUtils.randFloatSpread(360);
-      const phi = THREE.MathUtils.randFloatSpread(360);
-
-      let x = distance * Math.sin(theta) * Math.cos(phi);
-      let y = distance * Math.sin(theta) * Math.sin(phi);
-      let z = distance * Math.cos(theta);
-
-      positions.set([x, y, z], i * 3);
-    }
-
-    return positions;
-  }, []);
+  const { width: windowWidth } = useWindowSize();
 
   /**
    * Animations
    */
 
-  const ambientSpringConfig: SpringProps["config"] & { duration: number } = {
-    duration: 2000,
-    easing: (t: number) => t,
-  };
+  // const ambientSpringConfig: SpringProps["config"] & { duration: number } = {
+  //   duration: 2000,
+  //   easing: (t: number) => t,
+  // };
 
   const movementSpringConfig: SpringProps["config"] = {
     mass: 3,
@@ -89,25 +63,13 @@ export function House({}: HouseProps) {
   const [houseMaterialSprings, houseMaterialApi] = useSpring<{
     metalness: number;
     roughness: number;
+    opacity: number;
   }>(() => ({
     metalness: 0.3,
     roughness: 0.5,
-    config: ambientSpringConfig,
-  }));
-
-  const [pointsMovementSprings, pointsMovementApi] = useSpring<{
-    opacity: number;
-  }>(() => ({
-    opacity: 0.1,
+    opacity: 1,
     config: movementSpringConfig,
   }));
-
-  // const [pointsAmbientSprings, pointsAmbientApi] = useSpring<{
-  //   hue: number;
-  // }>(() => ({
-  //   hue: 80,
-  //   config: ambientSpringConfig,
-  // }));
 
   useFrame(() => {
     const vector = cameraSprings.position.get();
@@ -116,24 +78,21 @@ export function House({}: HouseProps) {
       const [x, y, z] = vector;
       camera.position.set(x, y, z);
     }
-
-    if (points.current) {
-      points.current.rotation.z += 0.0001;
-    }
   });
 
   useEffect(() => {
     cameraApi.stop();
     houseApi.stop();
-    pointsMovementApi.stop();
 
     if (housePlace === "initial") {
-      pointsMovementApi.start({
-        opacity: 0.1,
+      houseMaterialApi.start({
+        opacity: 1,
+        roughness: 0.5,
       });
     } else {
-      pointsMovementApi.start({
-        opacity: 0.8,
+      houseMaterialApi.start({
+        opacity: 0.25,
+        roughness: 1,
       });
     }
 
@@ -175,18 +134,17 @@ export function House({}: HouseProps) {
         break;
       }
     }
-  }, [cameraApi, houseApi, pointsMovementApi, housePlace]);
+  }, [cameraApi, houseApi, housePlace]);
 
-  useInterval(() => {
-    houseMaterialApi.start({
-      metalness: random(0.2, 0.7),
-      roughness: random(0.4, 0.8),
-    });
-
-    // pointsAmbientApi.start({
-    //   hue: random(0, 360),
-    // });
-  }, ambientSpringConfig.duration);
+  useEffect(() => {
+    if (houseRef.current) {
+      if (windowWidth > 900) {
+        houseRef.current.position.x = -1 + windowWidth * 0.0005;
+      } else {
+        houseRef.current.position.x = -2.67 + windowWidth * 0.0007;
+      }
+    }
+  }, [windowWidth]);
 
   /**
    * Render
@@ -195,36 +153,15 @@ export function House({}: HouseProps) {
     <>
       <PerspectiveCamera fov={1} near={1} far={1000} makeDefault />
       <hemisphereLight intensity={1} />
-      <points
-        ref={points}
-        rotation={[degToRad(28), degToRad(2), degToRad(12)]}
-        position={[0, -1, -9]}
-      >
-        <bufferGeometry>
-          <bufferAttribute
-            attach="attributes-position"
-            count={particlesPosition.length / 3}
-            array={particlesPosition}
-            itemSize={2}
-          />
-        </bufferGeometry>
-        <animated.pointsMaterial
-          // color={pointsAmbientSprings.hue.to((hue) => `hsl(${hue}, 30%, 50%)`)}
-          color="#ffffff"
-          size={0.01}
-          sizeAttenuation
-          opacity={pointsMovementSprings.opacity}
-          transparent
-        />
-      </points>
       <animated.group
+        ref={houseRef}
         // @ts-ignore
         rotation={houseSprings.rotation}
       >
         <mesh
           // @ts-ignore
           geometry={nodes.Cube002.geometry}
-          position={[0.9, 2.035, -0.044]}
+          position={[0.95, 2.035, -0.044]}
           rotation={[2.454, 0.01, -0.83]}
           scale={[0.108, 0.82, 1.298]}
           castShadow
@@ -238,6 +175,8 @@ export function House({}: HouseProps) {
             clearcoat={1}
             ior={1}
             iridescence={0}
+            transparent
+            opacity={houseMaterialSprings.opacity}
           />
         </mesh>
       </animated.group>
@@ -255,6 +194,7 @@ export function House({}: HouseProps) {
           scale={[3, 10, 1]}
         />
       </Environment>
+      <Backdrop movementSpringConfig={movementSpringConfig} />
       <Effects movementSpringConfig={movementSpringConfig} />
     </>
   );
