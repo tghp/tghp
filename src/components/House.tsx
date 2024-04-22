@@ -63,6 +63,7 @@ export function House({}: HouseProps) {
 
   const ambientSpringConfig: SpringProps["config"] & { duration: number } = {
     duration: 2000,
+    easing: (t: number) => t,
   };
 
   const movementSpringConfig: SpringProps["config"] = {
@@ -94,12 +95,19 @@ export function House({}: HouseProps) {
     config: ambientSpringConfig,
   }));
 
-  const [pointsSprings, pointsApi] = useSpring<{
+  const [pointsMovementSprings, pointsMovementApi] = useSpring<{
     opacity: number;
   }>(() => ({
-    opacity: 0.2,
+    opacity: 0.1,
     config: movementSpringConfig,
   }));
+
+  // const [pointsAmbientSprings, pointsAmbientApi] = useSpring<{
+  //   hue: number;
+  // }>(() => ({
+  //   hue: 80,
+  //   config: ambientSpringConfig,
+  // }));
 
   useFrame(() => {
     const vector = cameraSprings.position.get();
@@ -117,14 +125,14 @@ export function House({}: HouseProps) {
   useEffect(() => {
     cameraApi.stop();
     houseApi.stop();
-    pointsApi.stop();
+    pointsMovementApi.stop();
 
     if (housePlace === "initial") {
-      pointsApi.start({
-        opacity: 0.2,
+      pointsMovementApi.start({
+        opacity: 0.1,
       });
     } else {
-      pointsApi.start({
+      pointsMovementApi.start({
         opacity: 0.8,
       });
     }
@@ -167,13 +175,17 @@ export function House({}: HouseProps) {
         break;
       }
     }
-  }, [cameraApi, houseApi, pointsApi, housePlace]);
+  }, [cameraApi, houseApi, pointsMovementApi, housePlace]);
 
   useInterval(() => {
     houseMaterialApi.start({
       metalness: random(0.2, 0.7),
       roughness: random(0.4, 0.8),
     });
+
+    // pointsAmbientApi.start({
+    //   hue: random(0, 360),
+    // });
   }, ambientSpringConfig.duration);
 
   /**
@@ -197,10 +209,11 @@ export function House({}: HouseProps) {
           />
         </bufferGeometry>
         <animated.pointsMaterial
-          color="#b2e8c7"
+          // color={pointsAmbientSprings.hue.to((hue) => `hsl(${hue}, 30%, 50%)`)}
+          color="#ffffff"
           size={0.01}
           sizeAttenuation
-          opacity={pointsSprings.opacity}
+          opacity={pointsMovementSprings.opacity}
           transparent
         />
       </points>
