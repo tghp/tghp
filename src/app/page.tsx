@@ -26,21 +26,21 @@ export default function Home() {
           >
             <Image
               src="/icons/nextjs.svg"
-              alt="Shopify"
+              alt="Next.js"
               width={50}
               height={50}
               unoptimized
             />
             <Image
               src="/icons/wordpress.svg"
-              alt="Shopify"
+              alt="WordPress"
               width={50}
               height={50}
               unoptimized
             />
             <Image
               src="/icons/payload.svg"
-              alt="Shopify"
+              alt="Payload"
               width={50}
               height={50}
               unoptimized
@@ -61,7 +61,7 @@ export default function Home() {
             />
             <Image
               src="/icons/react.svg"
-              alt="Shopify"
+              alt="React"
               width={50}
               height={50}
               unoptimized
@@ -82,63 +82,63 @@ export default function Home() {
           >
             <Image
               src="/icons/git.svg"
-              alt="Shopify"
+              alt="Git"
               width={50}
               height={50}
               unoptimized
             />
             <Image
               src="/icons/node.svg"
-              alt="Shopify"
+              alt="Node.js"
               width={50}
               height={50}
               unoptimized
             />
             <Image
               src="/icons/php.svg"
-              alt="Shopify"
+              alt="PHP"
               width={50}
               height={50}
               unoptimized
             />
             <Image
               src="/icons/vue.svg"
-              alt="Shopify"
+              alt="Vue"
               width={50}
               height={50}
               unoptimized
             />
             <Image
               src="/icons/vite.svg"
-              alt="Shopify"
+              alt="Vite"
               width={50}
               height={50}
               unoptimized
             />
             <Image
               src="/icons/figma.svg"
-              alt="Shopify"
+              alt="Figma"
               width={50}
               height={50}
               unoptimized
             />
             <Image
               src="/icons/gatsby.svg"
-              alt="Shopify"
+              alt="Gatsby"
               width={50}
               height={50}
               unoptimized
             />
             <Image
               src="/icons/three.svg"
-              alt="Shopify"
+              alt="Three.js"
               width={50}
               height={50}
               unoptimized
             />
             <Image
               src="/icons/remix.svg"
-              alt="Shopify"
+              alt="Remix"
               width={50}
               height={50}
               unoptimized
