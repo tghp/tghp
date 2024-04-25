@@ -8,10 +8,6 @@ export default function About() {
         <Main.OverCanvas className="pt-12 [font-stretch:130%] font-light">
           <div className="prose prose-base prose-xl max-w-[65rem]">
             <p>
-              THE GLASSHOUSE PROJECT ARE A SUCCESSFUL DIGITAL AGENCY WITH A
-              PASSION FOR UX BASED IN LONDON.
-            </p>
-            <p>
               We design solutions that work for you. Throughout the whole
               process we make sure this is always at the forefront of all
               decision making. We make sure our solutions are always best in
@@ -31,8 +27,8 @@ export default function About() {
             user friendly, functional code with clear documentation and we
             always hit our deadlines. Our team is made up of exceptional
             developers, techincal project managers and digital experts all based
-            in the UK. All dedicated to ensuring your digital visions are
-            brought to life
+            in the UK who thrive on the challenge of bringing your digital visions
+            to life.
           </div>
         </Main.OverCanvas>
         <Divider />
