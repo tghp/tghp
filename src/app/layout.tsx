@@ -9,6 +9,7 @@ import Link from "next/link";
 import { AnimationManager } from "@/components/AnimationManager";
 import { Divider } from "@/components/Divider";
 import { MenuLink } from "@/components/MenuLink";
+import { ConsoleHello } from "@/components/ConsoleHello";
 
 const anybody = Anybody({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
         ])}
       >
         <AnimationManager />
+        <ConsoleHello />
         <Canvas>
           <Suspense>
             <Scene />
