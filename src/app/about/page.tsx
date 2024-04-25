@@ -8,30 +8,31 @@ export default function About() {
         <Main.OverCanvas className="pt-12 [font-stretch:130%] font-light">
           <div className="prose prose-base prose-xl max-w-[65rem]">
             <p>
-              THE GLASSHOUSE PROJECT ARE A SUCCESSFUL DIGITAL AGENCY WITH A 
+              THE GLASSHOUSE PROJECT ARE A SUCCESSFUL DIGITAL AGENCY WITH A
               PASSION FOR UX BASED IN LONDON.
             </p>
-            <p> 
-              We design solutions that work for you. Throughout the whole 
-              process we make sure this is always at the forefront of all 
-              decision making.  We make sure our solutions are always best 
-              in class and adaptive, ensuring we keep up to date with current 
-              trends and new technologies.  We fit our stack to the project 
-              not your project to the stack so you can be sure that we are 
-              engineering the right solution for you. 
+            <p>
+              We design solutions that work for you. Throughout the whole
+              process we make sure this is always at the forefront of all
+              decision making. We make sure our solutions are always best in
+              class and adaptive, ensuring we keep up to date with current
+              trends and new technologies. We fit our stack to the project not
+              your project to the stack so you can be sure that we are
+              engineering the right solution for you.
             </p>
           </div>
         </Main.OverCanvas>
         <Divider />
         <Main.OverCanvas className="pt-12 [font-stretch:130%] font-light">
           <div className="prose prose-base prose-xl max-w-[65rem]">
-             We've been designing and building bespoke platforms and handling 
-             custom integrations since 2010 so you're in safe hands. We pride 
-             ourselves in producing and maintaining high quality, user friendly, 
-             functional code with clear documentation and we always hit our 
-             deadlines. Our team is made up of exceptional developers, techincal project 
-             managers and digital experts all based in the UK. All dedicated to ensuring 
-             your digital visions are brought to life 
+            We&apos;ve been designing and building bespoke platforms and
+            handling custom integrations since 2010 so you&apos;re in safe
+            hands. We pride ourselves in producing and maintaining high quality,
+            user friendly, functional code with clear documentation and we
+            always hit our deadlines. Our team is made up of exceptional
+            developers, techincal project managers and digital experts all based
+            in the UK. All dedicated to ensuring your digital visions are
+            brought to life
           </div>
         </Main.OverCanvas>
         <Divider />
