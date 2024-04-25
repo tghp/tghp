@@ -8,33 +8,30 @@ export default function About() {
         <Main.OverCanvas className="pt-12 [font-stretch:130%] font-light">
           <div className="prose prose-base prose-xl max-w-[65rem]">
             <p>
-              We start every project by really getting to grips with what it is
-              you need. We make sure we fully understand your business and goals
-              so we can offer the right solution for you. There is no one size
-              fits all website and we understand every business has different
-              needs and requirements. We will work with you to ensure any
-              digital solution we provide be that web design, development or
-              digital marketing is going to make a big difference to your bottom
-              line.
+              THE GLASSHOUSE PROJECT ARE A SUCCESSFUL DIGITAL AGENCY WITH A 
+              PASSION FOR UX BASED IN LONDON.
             </p>
-            <p>
-              We don’t have fancy expensive offices in central London and a
-              massive team of creatives and developers. We work on a per project
-              basis with exceptional developers, designers and other digital
-              experts in the UK, allowing us to build the perfect team tailored
-              to solving your digital problems.
+            <p> 
+              We design solutions that work for you. Throughout the whole 
+              process we make sure this is always at the forefront of all 
+              decision making.  We make sure our solutions are always best 
+              in class and adaptive, ensuring we keep up to date with current 
+              trends and new technologies.  We fit our stack to the project 
+              not your project to the stack so you can be sure that we are 
+              engineering the right solution for you. 
             </p>
           </div>
         </Main.OverCanvas>
         <Divider />
         <Main.OverCanvas className="pt-12 [font-stretch:130%] font-light">
           <div className="prose prose-base prose-xl max-w-[65rem]">
-            We have a small core team but we work with a select group of the
-            most talented Designers and Developers all based in the UK on a
-            project by project basis. This means that whatever your digital
-            problem we can always create the best team to solve it for you. We
-            pride ourselves in producing quality, functional websites with clean
-            SEO friendly code and we always hit our deadlines.
+             We've been designing and building bespoke platforms and handling 
+             custom integrations since 2010 so you're in safe hands. We pride 
+             ourselves in producing and maintaining high quality, user friendly, 
+             functional code with clear documentation and we always hit our 
+             deadlines. Our team is made up of exceptional developers, techincal project 
+             managers and digital experts all based in the UK. All dedicated to ensuring 
+             your digital visions are brought to life 
           </div>
         </Main.OverCanvas>
         <Divider />
