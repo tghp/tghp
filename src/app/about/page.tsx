@@ -16,11 +16,11 @@ export default function About() {
         <Divider />
         <Main.OverCanvas className="pt-12 [font-stretch:130%] font-light">
           <div className="prose prose-base prose-xl max-w-[65rem]">
-            We fit our stack to the project not your project to the stack so 
-            you can be sure that we are engineering the right solution for you.
             Our London based team is made up of exceptional developers, 
             techincal project managers and digital experts who thrive on the 
-            challenge of bringing your digital visions to life.
+            challenge of bringing your digital visions to life. 
+            We fit our stack to the project not your project to the stack so 
+            you can be sure that we are engineering the right solution for you.
           </div>
         </Main.OverCanvas>
         <Divider />
