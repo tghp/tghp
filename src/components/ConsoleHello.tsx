@@ -37,7 +37,7 @@ xxxx   │   │        xxx │
       "🤔 Want to see how this was made? Check out the repo at https://github.com/tghp/tghp",
     );
     console.log(
-      "✉️ You seem like the curious type, we're always looking for new talent. We'd love to hear from you. Reach out to us at glasshouse@tghp.co.uk",
+      "✍️ You seem like the curious type, we're always looking for new talent. We'd love to hear from you. Reach out to us at hireme@tghp.co.uk",
     );
   }, []);
 
