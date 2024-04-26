@@ -14,7 +14,7 @@ export default function About() {
           </div>
         </Main.OverCanvas>
         <Divider />
-        <Main.OverCanvas className="pt-12 font-light">
+        <Main.OverCanvas className="pt-12 [font-stretch:130%] font-light">
           <div className="prose prose-base prose-xl max-w-[65rem]">
             We fit our stack to the project not your project to the stack so 
             you can be sure that we are engineering the right solution for you.
