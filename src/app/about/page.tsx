@@ -18,19 +18,19 @@ export default function About() {
           <div className="prose prose-base prose-xl max-w-[65rem]">
             We fit our stack to the project not your project to the stack so 
             you can be sure that we are engineering the right solution for you.
+            Our London based team is made up of exceptional developers, 
+            techincal project managers and digital experts who thrive on the 
+            challenge of bringing your digital visions to life.
           </div>
         </Main.OverCanvas>
         <Divider />
         <Main.OverCanvas className="pt-12 [font-stretch:130%] font-light">
           <div className="prose prose-base prose-xl max-w-[65rem]">
-            We&apos;ve been designing and building bespoke platforms and
+            We&apos;ve been designing and building bespoke sites and
             handling custom integrations since 2010 so you&apos;re in safe
             hands. We pride ourselves in producing and maintaining high quality,
             user friendly, functional code with clear documentation and we
-            always hit our deadlines. Our team is made up of exceptional
-            developers, techincal project managers and digital experts all based
-            in the UK who thrive on the challenge of bringing your digital visions
-            to life.
+            always hit our deadlines. 
           </div>
         </Main.OverCanvas>
         <Divider />
