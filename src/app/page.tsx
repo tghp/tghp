@@ -34,17 +34,7 @@ export default function Home() {
             <Main.OverCanvas className="w-[calc(min(43rem,100%))] font-light pr-8">
              <p>The Glasshouse Project are a successful Digital Agency with a
               passion for UX based in London.
-            </p>
-            <p>
-            We design solutions that work for you. Throughout the whole
-            process we make sure this is always at the forefront of all
-            decision making. We make sure our solutions are always best in
-            class and adaptive, ensuring we keep up to date with current
-            trends and new technologies. We fit our stack to the project not
-            your project to the stack so you can be sure that we are
-            engineering the right solution for you.
-            </p>
-             </Main.OverCanvas>
+            </Main.OverCanvas>
           </div>
         </div>
         <Divider />
