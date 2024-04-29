@@ -249,7 +249,6 @@ export default function About() {
             href="https://www.themarcheswoking.co.uk/"
             categories={[categories.wordpress]}
           />
-          <WorkItem name="Lipton Rogers" categories={[categories.wordpress]} />
         </ul>
       </div>
       <Divider />
