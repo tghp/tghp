@@ -146,7 +146,7 @@ export default function About() {
             categories={[categories.wordpress, categories.react]}
           />
           <WorkItem
-            name="Emigrnat Bank Fine Art"
+            name="Emigrant Bank Fine Art"
             href="https://emigrantbankfineart.com/"
             categories={[categories.wordpress]}
           />
