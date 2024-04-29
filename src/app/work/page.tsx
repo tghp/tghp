@@ -106,6 +106,16 @@ export default function About() {
             ]}
           />
           <WorkItem
+            name="WOLF1834"
+            href="https://www.wolf1834.com/"
+            categories={[categories.magento, categories.ecommerce]}
+          />
+          <WorkItem
+            name="Law AI"
+            href="https://www.law-ai.org/"
+            categories={[categories.wordpress]}
+          />
+          <WorkItem
             name="World's Fair"
             href="https://worldsfair.co/"
             categories={[
@@ -116,8 +126,8 @@ export default function About() {
             ]}
           />
           <WorkItem
-            name="Longview Philanthropy"
-            href="https://www.longview.org/"
+            name="Emigrant Bank Fine Art"
+            href="https://emigrantbankfineart.com/"
             categories={[categories.wordpress]}
           />
           <WorkItem
@@ -131,14 +141,9 @@ export default function About() {
             ]}
           />
           <WorkItem
-            name="WOLF1834"
-            href="https://www.wolf1834.com/"
-            categories={[categories.magento, categories.ecommerce]}
-          />
-          <WorkItem
-            name="Law AI"
-            href="https://www.law-ai.org/"
-            categories={[categories.wordpress]}
+            name="The Shutter Shop"
+            href="https://www.shuttershop.co.uk/"
+            categories={[categories.shopify, categories.ecommerce]}
           />
           <WorkItem
             name="Institute for Progress"
@@ -146,24 +151,24 @@ export default function About() {
             categories={[categories.wordpress, categories.react]}
           />
           <WorkItem
-            name="Emigrant Bank Fine Art"
-            href="https://emigrantbankfineart.com/"
-            categories={[categories.wordpress]}
-          />
-          <WorkItem
-            name="The Shutter Shop"
-            href="https://www.shuttershop.co.uk/"
-            categories={[categories.shopify, categories.ecommerce]}
-          />
-          <WorkItem
-            name="Kampus"
-            href="https://www.kampus-mcr.co.uk/"
+            name="Longview Philanthropy"
+            href="https://www.longview.org/"
             categories={[categories.wordpress]}
           />
           <WorkItem
             name="Visa Limbo"
             href="https://www.visalimbo.org/"
             categories={[categories.nextjs]}
+          />
+          <WorkItem
+            name="GMT London"
+            href="https://gmtlondon.com/"
+            categories={[categories.magento, categories.ecommerce]}
+          />
+          <WorkItem
+            name="Kampus"
+            href="https://www.kampus-mcr.co.uk/"
+            categories={[categories.wordpress]}
           />
           <WorkItem
             name="Works in Progress"
@@ -216,11 +221,6 @@ export default function About() {
           <WorkItem
             name="Condor Straps"
             href="https://www.condorstraps.com/"
-            categories={[categories.magento, categories.ecommerce]}
-          />
-          <WorkItem
-            name="GMT London"
-            href="https://gmtlondon.com/"
             categories={[categories.magento, categories.ecommerce]}
           />
           <WorkItem
