@@ -61,7 +61,7 @@ const categories = {
   woocommerce: "woocommerce",
   pubpub: "pubpub",
   ecommerce: "ecommerce",
-  bespokeApplication: "bespoke application",
+  bespokeApplication: "bespoke CMS",
 };
 
 export default function About() {
@@ -88,7 +88,7 @@ export default function About() {
           {/*  ]}*/}
           {/*/>*/}
           <WorkItem
-            name="park square"
+            name="Park Square"
             href="https://parksqmk.co.uk/"
             categories={[
               categories.nextjs,
@@ -123,10 +123,27 @@ export default function About() {
               categories.bespokeApplication,
             ]}
           />
+            <WorkItem
+            name="World's Fair"
+            href="https://worldsfair.co/"
+            categories={[categories.gatsby,
+              categories.react,
+              categories.headless,
+              categories.wordpress,]}
+          />
+          https://worldsfair.co/
           <WorkItem
             name="Longview Philanthropy"
             href="https://www.longview.org/"
             categories={[categories.wordpress]}
+          />
+           <WorkItem
+            name="Joe Carlsmith"
+            href="https://joecarlsmith.com/"
+            categories={[categories.gatsby,
+              categories.react,
+              categories.headless,
+              categories.wordpress,}
           />
           <WorkItem
             name="WOLF1834"
@@ -140,8 +157,8 @@ export default function About() {
             categories={[categories.wordpress, categories.react]}
           />
           <WorkItem
-            name="Federation of American Scientists"
-            href="https://ifp.org/"
+            name="Emigrnat Bank Fine Art"
+            href="https://emigrantbankfineart.com/"
             categories={[categories.wordpress]}
           />
           <WorkItem 
@@ -170,9 +187,19 @@ export default function About() {
             ]}
           />
           <WorkItem
+            name="Federation of American Scientists"
+            href="https://ifp.org/"
+            categories={[categories.wordpress]}
+          />
+          <WorkItem
             name="Corkfield"
             href="https://www.corkfield.co.uk/"
             categories={[categories.wordpress]}
+          />
+          <WorkItem
+            name="Medirite"
+            href="https://www.medirite.co.uk//"
+            categories={[categories.magento, categories.ecommerce]}
           />
           <WorkItem
             name="Shutters and Shades"
@@ -191,6 +218,11 @@ export default function About() {
               categories.woocommerce,
               categories.ecommerce,
             ]}
+          />
+          <WorkItem
+            name="Fine Art Group"
+            href="https://www.fineartgroup.com/"
+            categories={[categories.wordpress]}
           />
           <WorkItem
             name="Condor Straps"
