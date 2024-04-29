@@ -18,7 +18,7 @@ export default function About() {
         <Main.OverCanvas className="pt-12 [font-stretch:130%] font-light">
           <div className="prose prose-base prose-xl max-w-[65rem]">
             Our London based team is made up of exceptional developers,
-            techincal project managers and digital experts who thrive on the
+            technical project managers and digital experts who thrive on the
             challenge of bringing your digital visions to life.
           </div>
         </Main.OverCanvas>
