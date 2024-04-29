@@ -113,7 +113,7 @@ export default function About() {
               categories.ecommerce,
             ]}
           />
-           <WorkItem
+          <WorkItem
             name="Books in Progress"
             href="https://books.worksinprogress.co/"
             categories={[
@@ -123,33 +123,41 @@ export default function About() {
               categories.bespokeApplication,
             ]}
           />
-            <WorkItem
+          <WorkItem
             name="World's Fair"
             href="https://worldsfair.co/"
-            categories={[categories.gatsby,
+            categories={[
+              categories.gatsby,
               categories.react,
               categories.headless,
-              categories.wordpress,]}
+              categories.wordpress,
+            ]}
           />
           <WorkItem
             name="Longview Philanthropy"
             href="https://www.longview.org/"
             categories={[categories.wordpress]}
           />
-           <WorkItem
+          <WorkItem
             name="Joe Carlsmith"
             href="https://joecarlsmith.com/"
-            categories={[categories.gatsby,
+            categories={[
+              categories.gatsby,
               categories.react,
               categories.headless,
-              categories.wordpress,]}
+              categories.wordpress,
+            ]}
           />
           <WorkItem
             name="WOLF1834"
             href="https://www.wolf1834.com/"
             categories={[categories.magento, categories.ecommerce]}
           />
-          <WorkItem name="Law AI" href="https://www.law-ai.org/" categories={[categories.wordpress]} />
+          <WorkItem
+            name="Law AI"
+            href="https://www.law-ai.org/"
+            categories={[categories.wordpress]}
+          />
           <WorkItem
             name="Institute for Progress"
             href="https://ifp.org/"
