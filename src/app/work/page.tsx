@@ -131,7 +131,6 @@ export default function About() {
               categories.headless,
               categories.wordpress,]}
           />
-          https://worldsfair.co/
           <WorkItem
             name="Longview Philanthropy"
             href="https://www.longview.org/"
@@ -143,7 +142,7 @@ export default function About() {
             categories={[categories.gatsby,
               categories.react,
               categories.headless,
-              categories.wordpress,}
+              categories.wordpress,]}
           />
           <WorkItem
             name="WOLF1834"
@@ -161,10 +160,10 @@ export default function About() {
             href="https://emigrantbankfineart.com/"
             categories={[categories.wordpress]}
           />
-          <WorkItem 
-            name="The Shutter Shop" 
+          <WorkItem
+            name="The Shutter Shop"
             href="https://www.shuttershop.co.uk/"
-            categories={[categories.shopify, categories.ecommerce]} 
+            categories={[categories.shopify, categories.ecommerce]}
           />
           <WorkItem
             name="Kampus"
