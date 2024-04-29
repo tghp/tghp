@@ -69,24 +69,6 @@ export default function About() {
     <Main.Container>
       <div className="pt-[1px]">
         <ul className="flex flex-wrap">
-          {/*<WorkItem*/}
-          {/*  name="the castings"*/}
-          {/*  categories={[*/}
-          {/*    categories.nextjs,*/}
-          {/*    categories.react,*/}
-          {/*    categories.headless,*/}
-          {/*    categories.payload,*/}
-          {/*  ]}*/}
-          {/*/>*/}
-          {/*<WorkItem*/}
-          {/*  name="the blossoms"*/}
-          {/*  categories={[*/}
-          {/*    categories.nextjs,*/}
-          {/*    categories.react,*/}
-          {/*    categories.headless,*/}
-          {/*    categories.payload,*/}
-          {/*  ]}*/}
-          {/*/>*/}
           <WorkItem
             name="Park Square"
             href="https://parksqmk.co.uk/"
