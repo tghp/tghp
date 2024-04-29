@@ -32,10 +32,9 @@ export default function Home() {
         <div className="ml-[--gutter-first] py-12 grow flex items-center border-l border-teal-dark">
           <div className="border-t border-b border-teal-dark w-full my-10">
             <Main.OverCanvas className="w-[calc(min(43rem,100%))] prose-xl font-light pr-8">
-              <p>
                 The Glasshouse Project are a successful Digital Agency with a
-                passion for UX based in London.
-              </p>
+                passion for UX based in London.  We fit our stack to the project not your project to the stack so 
+                you can be sure that we are engineering the right solution for you.
             </Main.OverCanvas>
           </div>
         </div>
