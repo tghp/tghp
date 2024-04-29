@@ -23,6 +23,7 @@ function WorkItem({
           <a
             href={href}
             className="absolute -top-6 -bottom-7 -left-8 -right-8 mix-blend-darken"
+            target="_blank"
           />
         )}
         <div
