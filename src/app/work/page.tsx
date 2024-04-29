@@ -98,59 +98,23 @@ export default function About() {
             ]}
           />
           <WorkItem
-            name="unitary fund"
+            name="Unitary Fund"
             href="https://unitary.fund/"
             categories={[categories.astro, categories.react]}
           />
           <WorkItem
-            name="longview"
-            href="https://www.longview.org/"
-            categories={[categories.wordpress]}
-          />
-          {/*<WorkItem name="law ai" categories={[categories.wordpress]} />*/}
-          <WorkItem
-            name="kampus"
-            href="https://www.kampus-mcr.co.uk/"
-            categories={[categories.wordpress]}
-          />
-          <WorkItem
-            name="poplin"
-            href="https://poplinmcr.co.uk/"
-            categories={[categories.wordpress]}
-          />
-          <WorkItem
-            name="the almere"
-            href="https://www.thealmere.co.uk/"
-            categories={[categories.wordpress]}
-          />
-          <WorkItem
-            name="corkfield"
-            href="https://www.corkfield.co.uk/"
-            categories={[categories.wordpress]}
-          />
-          <WorkItem
-            name="the marches"
-            href="https://www.themarcheswoking.co.uk/"
-            categories={[categories.wordpress]}
-          />
-          <WorkItem
-            name="visa limbo"
-            href="https://www.visalimbo.org/"
-            categories={[categories.nextjs]}
-          />
-          <WorkItem name="hear here" categories={[categories.nextjs]} />
-          <WorkItem
-            name="wychwood art"
+            name="Wychwood Art"
             href="https://wychwoodart.com/"
             categories={[
               categories.nextjs,
               categories.headless,
               categories.craftcms,
+              categories.magento,
               categories.ecommerce,
             ]}
           />
-          <WorkItem
-            name="books in progress"
+           <WorkItem
+            name="Books in Progress"
             href="https://books.worksinprogress.co/"
             categories={[
               categories.nextjs,
@@ -160,7 +124,43 @@ export default function About() {
             ]}
           />
           <WorkItem
-            name="works in progress"
+            name="Longview Philanthropy"
+            href="https://www.longview.org/"
+            categories={[categories.wordpress]}
+          />
+          <WorkItem
+            name="WOLF1834"
+            href="https://www.wolf1834.com/"
+            categories={[categories.magento, categories.ecommerce]}
+          />
+          <WorkItem name="Law AI" href="https://www.law-ai.org/" categories={[categories.wordpress]} />
+          <WorkItem
+            name="Institute for Progress"
+            href="https://ifp.org/"
+            categories={[categories.wordpress, categories.react]}
+          />
+          <WorkItem
+            name="Federation of American Scientists"
+            href="https://ifp.org/"
+            categories={[categories.wordpress]}
+          />
+          <WorkItem 
+            name="The Shutter Shop" 
+            href="https://www.shuttershop.co.uk/"
+            categories={[categories.shopify, categories.ecommerce]} 
+          />
+          <WorkItem
+            name="Kampus"
+            href="https://www.kampus-mcr.co.uk/"
+            categories={[categories.wordpress]}
+          />
+          <WorkItem
+            name="Visa Limbo"
+            href="https://www.visalimbo.org/"
+            categories={[categories.nextjs]}
+          />
+          <WorkItem
+            name="Works in Progress"
             href="https://worksinprogress.co/"
             categories={[
               categories.gatsby,
@@ -170,17 +170,12 @@ export default function About() {
             ]}
           />
           <WorkItem
-            name="ifp"
-            href="https://ifp.org/"
-            categories={[categories.wordpress, categories.react]}
+            name="Corkfield"
+            href="https://www.corkfield.co.uk/"
+            categories={[categories.wordpress]}
           />
           <WorkItem
-            name="health housing"
-            categories={[categories.wordpress, categories.react]}
-          />
-          <WorkItem name="arcadia science" categories={[categories.pubpub]} />
-          <WorkItem
-            name="shutters and shades"
+            name="Shutters and Shades"
             href="https://www.shuttersandshades.co.uk/"
             categories={[
               categories.wordpress,
@@ -189,7 +184,7 @@ export default function About() {
             ]}
           />
           <WorkItem
-            name="fiona howard"
+            name="Fiona Howard"
             href="https://fionahoward.com/"
             categories={[
               categories.wordpress,
@@ -198,41 +193,31 @@ export default function About() {
             ]}
           />
           <WorkItem
-            name="condor straps"
+            name="Condor Straps"
             href="https://www.condorstraps.com/"
             categories={[categories.magento, categories.ecommerce]}
           />
           <WorkItem
-            name="gmt london"
+            name="GMT London"
             href="https://gmtlondon.com/"
             categories={[categories.magento, categories.ecommerce]}
           />
           <WorkItem
-            name="royal london"
+            name="Royal London"
             href="https://royallondonwatches.com/"
             categories={[categories.magento, categories.ecommerce]}
           />
           <WorkItem
-            name="WOLF1834"
-            href="https://www.wolf1834.com/"
-            categories={[categories.magento, categories.ecommerce]}
-          />
-          <WorkItem
-            name="pcb byrne"
+            name="PCB Byrne"
             href="https://www.pcb-byrne.com/"
             categories={[categories.wordpress]}
           />
-          <WorkItem name="the shutter shop" categories={[categories.shopify]} />
           <WorkItem
-            name="menkind"
-            categories={[categories.magento, categories.ecommerce]}
+            name="The Marches"
+            href="https://www.themarcheswoking.co.uk/"
+            categories={[categories.wordpress]}
           />
-          <WorkItem
-            name="red5"
-            categories={[categories.magento, categories.ecommerce]}
-          />
-          <WorkItem name="lipton rogers" categories={[categories.wordpress]} />
-          <WorkItem name="zoe jordan" categories={[categories.shopify]} />
+          <WorkItem name="Lipton Rogers" categories={[categories.wordpress]} />
         </ul>
       </div>
       <Divider />
